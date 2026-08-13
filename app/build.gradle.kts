@@ -113,6 +113,8 @@ dependencies {
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 
+    implementation(libs.androidx.core.splashscreen)
+
     testImplementation(libs.junit)
 
     androidTestImplementation(

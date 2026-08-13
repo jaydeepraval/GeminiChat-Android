@@ -69,6 +69,34 @@ class ChatRepository @Inject constructor(
                     e.message ?: "Unknown error"
                 )
             )
+        } catch (e: java.net.SocketTimeoutException) {
+
+            Result.failure(
+                Exception(
+                    "Request timed out. Please try again."
+                )
+            )
+
+        } catch (e: retrofit2.HttpException) {
+
+            val errorBody =
+                e.response()
+                    ?.errorBody()
+                    ?.string()
+
+            Result.failure(
+                Exception(
+                    "HTTP ${e.code()}: $errorBody"
+                )
+            )
+
+        } catch (e: Exception) {
+
+            Result.failure(
+                Exception(
+                    e.message ?: "Something went wrong"
+                )
+            )
         }
     }
 }
