@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AIDroidMentor" parent="android:Theme.Material.Light.NoActionBar" />
+    <style
+        name="Theme.AIDroidMentor"
+        parent="android:style/Theme.Material.Light.NoActionBar">
+
+        <item name="android:windowActionModeOverlay">true</item>
+
+    </style>
+
 </resources>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style
+        name="Theme.AIDroidMentor.Starting"
+        parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">
+            @android:color/black
+        </item>
+
+        <item name="windowSplashScreenAnimatedIcon">
+            @drawable/ic_splash_empty
+        </item>
+
+        <item name="postSplashScreenTheme">
+            @style/Theme.AIDroidMentor
+        </item>
+
+    </style>
+
+    <style
+        name="Theme.AIDroidMentor"
+        parent="android:style/Theme.Material.Light.NoActionBar" />
+
+</resources>-->

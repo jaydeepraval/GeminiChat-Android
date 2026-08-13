@@ -1,7 +1,21 @@
 package com.example.aidroidmentor.data
 
-import androidx.compose.ui.graphics.vector.ImageVector
+enum class InterviewLevel(
+    val title: String,
+    val description: String
+) {
+    BEGINNER(
+        title = "Beginner",
+        description = "Kotlin basics, Android fundamentals and Jetpack Compose"
+    ),
 
-data class InterviewLevel( val title: String,
-                           val description: String,
-                           val icon: ImageVector)
+    INTERMEDIATE(
+        title = "Intermediate",
+        description = "MVVM, Hilt, Retrofit, Room, Coroutines and Compose"
+    ),
+
+    SENIOR(
+        title = "Senior",
+        description = "Architecture, performance, system design and advanced Android"
+    )
+}

@@ -1,11 +1,21 @@
 package com.example.aidroidmentor.domain
 
 sealed class Screen(
-    val route: String,
-    val title: String
+    val route: String
 ) {
-    data object Chat : Screen("chat", "Chat")
-    data object Mentor : Screen("mentor", "Mentor")
-    data object Interview : Screen("interview", "Interview")
-    data object Saved : Screen("saved", "Saved")
+
+    data object Splash :
+        Screen("splash")
+
+    data object Mentor :
+        Screen("mentor")
+
+    data object Chat :
+        Screen("chat")
+
+    data object Interview :
+        Screen("interview")
+
+    data object Saved :
+        Screen("saved")
 }

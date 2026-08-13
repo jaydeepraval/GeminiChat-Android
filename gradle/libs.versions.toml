@@ -18,8 +18,10 @@ kotlin = "2.4.10"
 hilt = "2.60.1"
 ksp = "2.3.11"
 composeBom = "2026.06.01"
+coreSplashscreen = "1.2.0"
 
 [libraries]
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
 androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }

@@ -1,11 +1,14 @@
 package com.example.aidroidmentor.presentation
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import com.example.aidroidmentor.R
 import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.milliseconds
 
@@ -15,40 +18,21 @@ fun SplashScreen(
 ) {
 
     LaunchedEffect(Unit) {
-
         delay(2000.milliseconds)
-
         onNavigate()
-
     }
-
 
     Box(
-        modifier = Modifier
-            .fillMaxSize(),
-        contentAlignment = Alignment.Center
+        modifier = Modifier.fillMaxSize()
     ) {
 
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-
-
-            Text(
-                text = "🤖 AI Assistant",
-                style = MaterialTheme.typography.headlineMedium
-            )
-
-
-            Spacer(
-                modifier = Modifier.height(16.dp)
-            )
-
-
-            CircularProgressIndicator()
-
-        }
-
+        Image(
+            painter = painterResource(
+                id = R.drawable.splash
+            ),
+            contentDescription = "AIDroid Mentor",
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
     }
-
 }
